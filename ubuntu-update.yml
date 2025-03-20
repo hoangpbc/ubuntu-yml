@@ -1,0 +1,8 @@
+---
+- name: Update APT package list on Ubuntu
+  hosts: all
+  become: true
+  tasks:
+    - name: Run apt update
+      apt:
+        update_cache: yes
